@@ -35,14 +35,13 @@
       align-items: center;
     }
 
-    /* Modal más pequeño con margen para mostrar fondo */
+    /* Modal más pequeño pero con contenido grande */
     .modal {
       background: #fff;
       border-radius: 20px;
-      padding: 30px;
-      max-width: 520px; /* modal más compacto */
-      width: 90%;
-      margin: 20px;
+      padding: 40px;
+      max-width: 700px; /* modal más compacto */
+      width: 80%;
       height: auto;
       box-shadow: 0 12px 30px rgba(0,0,0,0.4);
       display: flex;
@@ -88,18 +87,5 @@
       </p>
     </div>
   </div>
-
-  <script>
-    function setVh() {
-      document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
-    }
-    setVh();
-    window.addEventListener('resize', setVh);
-
-    if ('serviceWorker' in navigator) {
-      // No se puede registrar SW desde inline HTML en GitHub Pages, pero dejamos control de fallback
-      console.log('Service Worker disponible, registre un archivo sw.js externo si necesita cache offline');
-    }
-  </script>
 </body>
 </html>
