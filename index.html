@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Good Morning</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fceabb, #f8b500);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Modal background */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Smaller modal box */
+    .modal {
+      background: #fff;
+      border-radius: 16px;
+      padding: 25px;
+      max-width: 380px; /* smaller width */
+      width: 90%;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      text-align: center;
+      animation: fadeInUp 1s forwards;
+    }
+
+    .modal h2 {
+      margin-top: 0;
+      color: #f8b500;
+      font-size: 2.2em;
+    }
+
+    .modal p {
+      font-size: 1.6em; /* bigger text inside smaller box */
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: red; /* lovely in red */
+      font-weight: bold;
+    }
+
+    .red-icon {
+      color: red; /* figurita in red */
+      font-weight: bold;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mobile adaptation */
+    @media (max-width: 480px) {
+      .modal {
+        padding: 20px;
+        max-width: 90%;
+      }
+      .modal h2 {
+        font-size: 2em;
+      }
+      .modal p {
+        font-size: 1.4em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="modal-overlay">
+    <div class="modal">
+      <h2>Good Morning ☀️</h2>
+      <p>
+        I hope your day will be as <span class="highlight">lovely</span><br>
+        as you were yesterday <span class="red-icon">✨</span>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
